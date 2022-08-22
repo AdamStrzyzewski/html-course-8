@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f9f9fd;
+      }
+
+      .pane {
+        display: none;
+        padding: 8px;
+        border-radius: 3px;
+      }
+
+      .is-active {
+        display: block;
+      }
+
+      .controls {
+        display: flex;
+      }
+
+      .controls a {
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="controls">
+        <a href="#pane-1">First cat</a>
+        <a href="#pane-2">Second cat</a>
+        <a href="#pane-3">Third cat</a>
+      </div>
+
+      <div id="pane-1" class="pane is-active">
+        <img
+          src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg"
+          width="320"
+          alt=""
+        />
+        <p>
+          <b>1</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ipsum vitae quam ea dolorum nisi at illo sunt voluptates, mollitia
+          nihil assumenda recusandae nobis eius adipisci consectetur, omnis
+          corrupti culpa nesciunt architecto minus commodi! Laboriosam
+          asperiores unde deserunt vitae nemo alias ducimus quas odit cum et!
+        </p>
+      </div>
+      <div id="pane-2" class="pane">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg"
+          width="320"
+          alt=""
+        />
+        <p>
+          <b>2</b> - Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Explicabo saepe molestiae fugit! Officiis voluptate, voluptas
+          asperiores laudantium, ea vero distinctio quas quod porro possimus
+          velit architecto? Exercitationem atque ex rem!
+        </p>
+      </div>
+      <div id="pane-3" class="pane">
+        <img
+          src="https://cdn.pixabay.com/photo/2020/10/01/11/41/cat-5618328_1280.jpg"
+          width="320"
+          alt=""
+        />
+        <p>
+          <b>3</b> - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Sit natus cupiditate atque ullam illo repudiandae, ab quam ea soluta,
+          voluptates optio libero, perspiciatis laboriosam commodi ipsa
+          eligendi. Minus, vitae quam! Eius illo atque iste labore eligendi
+          natus porro. Aliquam laborum ad architecto beatae aut nesciunt
+          expedita adipisci voluptates. Quidem, beatae. Deserunt unde error
+          animi maiores.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const controls = document.querySelector(".controls");
+
+      controls.addEventListener("click", (e) => {
+        if (e.target === e.currentTarget) {
+          return;
+        }
+
+        e.preventDefault();
+
+        const prevActivePane = document.querySelector(".pane.is-active");
+
+        if (prevActivePane) {
+          prevActivePane.classList.remove("is-active");
+        }
+
+        const paneId = e.target.getAttribute("href").slice(1);
+        const nextActivePane = document.querySelector(`#${paneId}`);
+        nextActivePane.classList.add("is-active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        background: rgb(166, 166, 166);
+      }
+      li {
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        padding-top: 6px;
+        /* removing dots from unorganised list */
+        list-style: none;
+        /*  */
+        border: 1px dotted black;
+        margin-bottom: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+      }
+
+      /* .list li:first-child {
+        background-color: red;
+      }
+      .list li:last-child {
+        background-color: green;
+      }
+
+      .list li:not(first-child) {
+        background-color: blue;
+      } */
+
+      /* 0,1,2,3,4,5,6 */
+      /* 1,2,3,4,5,6*/
+      /* .list li:nth-child(n) {
+        background-color: red;
+      } */
+
+      /* 2 * 0 | 2 * 1 | 2 * 2 .... */
+      /* 2 | 4 | 6 |* */
+      /* .list li:nth-child(2n) {
+        background-color: blue;
+      } */
+
+      /* 2 * 0 + 1 = 1 */
+      /* 2 * 1 + 1 = 3 */
+      /* 2 * 2 + 1 = 5 */
+      /* 2 * 3 + 1 = 7 */
+      /* .list li:nth-child(2n + 1) {
+        background-color: blue;
+      } */
+
+      /* -0 + 5 = 5 */
+      /* -1 + 5 = 4 */
+      /* -2 + 5 = 3 */
+      /* -3 + 5 = 2 */
+      /* -4 + 5 = 1 */
+      /* -5 + 5 = 0 */
+      /* .list li:nth-child(-n + 5) {
+        background-color: blue;
+      } */
+      /* === */
+      /* .list li:nth-child(1),
+      .list li:nth-child(2),
+      .list li:nth-child(3),
+      .list li:nth-child(4),
+      .list li:nth-child(5) {
+        background-color: red;
+      } */
+
+      /* 2 * 0 + 6 = 6 ale od końca */
+      /* .list li:nth-last-child(2n + 6) {
+        background-color: red;
+      }
+
+      .list li:nth-last-child(-n + 5) {
+        background-color: blue;
+      } */
+
+      .list li:nth-child(odd) {
+        background-color: orange;
+      }
+      .list li:nth-child(even) {
+        background-color: blue;
+      }
+
+      .list li:nth-child(5) {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+
+    <ul class="list-2">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+  </body>
+</html>

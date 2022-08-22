@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style>
+      /* em zależną od font size elementu parent */
+      /* rem zależną od font size elementu <html> */
+      html {
+        font-size: 20px;
+      }
+
+      .parent {
+        font-size: 15px;
+      }
+      .em {
+        font-size: 2em;
+      }
+
+      .rem {
+        font-size: 2rem;
+        /* font-size: 0.5rem; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <p class="em">Lorem ipsum</p>
+    </div>
+
+    <p class="rem">Lorem ipsum</p>
+  </body>
+</html>

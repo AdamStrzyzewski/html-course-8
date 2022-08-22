@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        background-color: #f9f9fd;
+      }
+
+      .text {
+        background-color: tomato;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-left: 10px solid #2196f3;
+        border-right: 10px solid #2196f3;
+
+        /* Let's give the inline <span> element the top
+      and bottom margins, and borders that don't work.   */
+        padding-top: 100px;
+        padding-bottom: 100px;
+        border-top: 10px solid #2196f3;
+        border-bottom: 10px solid #2196f3;
+        background-clip: padding-box;
+      }
+
+      p {
+        border: 5px solid #212121;
+      }
+
+      /* span {
+        display: inline-block;
+      } */
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quaerat
+      eaque id voluptate reiciendis beatae vel nulla, doloremque dolore eum
+      nobis qui, laudantium dignissimos saepe. Possimus, nisi itaque? Fugiat
+      facilis saepe quo et architecto voluptatem blanditiis.
+    </p>
+
+    <span class="text">Inline element</span>
+    <span class="text">Inline element</span>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quaerat
+      eaque id voluptate reiciendis beatae vel nulla, doloremque dolore eum
+      nobis qui, laudantium dignissimos saepe. Possimus, nisi itaque? Fugiat
+      facilis saepe quo et architecto voluptatem blanditiis.
+    </p>
+  </body>
+</html>
