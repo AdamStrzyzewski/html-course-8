@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        background-color: #edf2f7;
+      }
+
+      .card {
+        display: flex;
+        /* flex-direction: row; */
+        flex-direction: column;
+        /* flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+        flex-basis: 320px;
+        margin: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+      }
+
+      .card > .content {
+        flex-grow: 1;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 2px dashed tomato;
+        border-radius: 4px;
+      }
+
+      .card > .meta {
+        padding: 10px;
+        text-align: center;
+        background-color: teal;
+        color: white;
+        border-radius: 4px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          quos consequuntur libero, ab possimus voluptates.
+        </div>
+        <div class="meta">Card «footer»</div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+          quod odit perferendis quaerat, quasi doloremque, delectus impedit
+          earum possimus unde neque similique quam aliquam, pariatur fugiat modi
+          tempore autem officia. Nostrum reiciendis suscipit, culpa nam rem,
+          libero delectus similique amet architecto qui deleniti expedita odio
+          accusamus sint ratione nesciunt magni!
+        </div>
+        <div class="meta">Card «footer»</div>
+      </div>
+    </div>
+  </body>
+</html>

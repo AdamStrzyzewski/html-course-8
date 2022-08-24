@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu {
+        border: 1px solid green;
+        padding: 10px;
+        list-style: none;
+        border-radius: 4px;
+        background-color: #2196f3;
+        display: flex;
+        height: 200px;
+
+        /* oś główna */
+        justify-content: flex-start;
+        /* justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-between; */
+        /* justify-content: space-around;
+        justify-content: space-evenly; */
+
+        /* oś poprzecznej */
+        align-items: flex-start;
+        align-items: flex-end;
+        /* align-items: center; */
+        /* align-items: stretch;  */
+        align-items: baseline;
+      }
+
+      .menu > .item:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .menu .item {
+        display: flex;
+      }
+
+      .menu .item .link {
+        display: block;
+        padding: 10px;
+        color: black;
+        background: white;
+        text-decoration: none;
+        transition: background-color 0.5s;
+      }
+
+      .menu .item .link:hover {
+        background-color: aquamarine;
+      }
+
+      .menu .link.p50 {
+        padding-top: 50px;
+      }
+
+      .menu .link.p20 {
+        padding-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li class="item"><a href="" class="link p50">Home Page</a></li>
+      <li class="item"><a href="" class="link p50">Blog</a></li>
+      <li class="item"><a href="" class="link p20">Podcasts</a></li>
+      <li class="item"><a href="" class="link p50">Contact</a></li>
+      <li class="item"><a href="" class="link p50">Contact</a></li>
+    </ul>
+  </body>
+</html>

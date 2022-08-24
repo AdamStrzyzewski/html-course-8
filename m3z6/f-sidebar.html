@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 32px;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1000px;
+        height: 100%;
+        margin: auto;
+        border: 1px solid black;
+      }
+
+      .sidebar {
+        flex-basis: 250px;
+        background-color: blue;
+      }
+
+      .sidebar-2 {
+        background-color: teal;
+        flex-grow: 1;
+        /* 2+1 = 3
+        1/3
+        */
+      }
+
+      .content {
+        flex-grow: 2;
+        /* 2 + 1 = 3
+        2/3
+        */
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">Sidebar</aside>
+      <main class="content">Main content</main>
+      <aside class="sidebar-2">Sidebar 2</aside>
+    </div>
+  </body>
+</html>

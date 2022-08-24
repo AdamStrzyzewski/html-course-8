@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #edf2f7;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        height: 100%;
+      }
+
+      .card-set {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* column-gap: 10px; */
+        /* row-gap: 10px; */
+      }
+
+      .item {
+        /* calc((100% - numberOfGapsInRow * valueOfOneGap) / numberOfElementInRow) */
+        flex-basis: calc((100% - 2 * 10px) / 3);
+        /* width: calc((100% - 2 * 10px) / 3); */
+        padding: 10px;
+        background-color: burlywood;
+        border: 2px solid black;
+      }
+
+      .item.full-row {
+        flex-basis: calc((100%) / 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="card-set">
+        <li class="item full-row">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+        <li class="item">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
