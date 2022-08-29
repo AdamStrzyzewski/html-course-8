@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: #f9f9fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .post {
+        position: relative;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 4px;
+        line-height: 1.5;
+        font-family: sans-serif;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .post:before,
+      .post:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 10px;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: #777;
+        box-shadow: 0 15px 10px #777;
+        transition: 0.5s;
+        transform: translateY(-10px);
+      }
+
+      .post:hover::before {
+        transform: translateY(0px) rotate(-3deg);
+      }
+
+      .post:hover::after {
+        transform: translateY(0px) rotate(3deg);
+      }
+      .post:after {
+        right: 10px;
+        left: auto;
+      }
+
+      .post-title {
+        margin-top: 0;
+      }
+
+      .post-text {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="post">
+      <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+      <p class="post-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas id
+        eius sunt quas eos accusantium! Pariatur alias reiciendis nesciunt fuga
+        repellat aperiam, omnis eligendi. Ut accusantium ea molestias totam eum
+        harum facere adipisci placeat reiciendis, consequatur aut officia non
+        obcaecati dolor quia laboriosam consequuntur odio, sed sint fuga nam.
+      </p>
+    </article>
+  </body>
+</html>

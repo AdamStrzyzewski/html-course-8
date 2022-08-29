@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .list {
+        list-style: none;
+      }
+      .list-link {
+        display: inline-flex;
+        align-items: center;
+        color: currentColor;
+        text-decoration: none;
+        font-size: 32px;
+      }
+
+      .list-link::before,
+      .list-link::after {
+        content: "";
+        display: block;
+        height: 24px;
+        width: 25px;
+        background-size: contain;
+        transition: 0.5s;
+      }
+
+      .list-link::after {
+        margin-left: 15px;
+        background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
+      }
+
+      .list-link::before {
+        background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png");
+        /* content: "before"; */
+        margin-right: 30px;
+        /* display: none; */
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      .list-link:hover::before {
+        display: block;
+        opacity: 1;
+        transform: translateX(0) rotate(180deg);
+      }
+      /* ::after ::before */
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="list-item">
+        <a href="" class="list-link">Home</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">Portfolio</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">Team</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">About</a>
+      </li>
+    </ul>
+  </body>
+</html>

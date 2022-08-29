@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 480px;
+        height: 480px;
+        margin: auto;
+        background: #fff url("https://image.ibb.co/mjdbZ5/bg5.jpg") no-repeat
+          center;
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        /* background-image: url("https://image.ibb.co/mjdbZ5/bg5.jpg"); */
+      }
+
+      .label {
+        color: #fff;
+        font-size: 60px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .custom {
+        background-size: auto;
+        background-size: auto auto;
+        background-size: 200px;
+        background-size: 200px auto;
+        background-size: 200px 500px;
+        background-size: auto 500px;
+        background-size: auto 50%;
+      }
+
+      .contain {
+        background-size: contain;
+      }
+
+      .cover {
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper custom">
+      <p class="label">Custom</p>
+    </div>
+    <div class="wrapper cover">
+      <p class="label">Cover</p>
+    </div>
+    <div class="wrapper contain">
+      <p class="label">Contain</p>
+    </div>
+  </body>
+</html>

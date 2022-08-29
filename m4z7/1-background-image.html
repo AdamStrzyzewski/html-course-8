@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #212121;
+      }
+
+      .tile-set {
+        display: flex;
+        justify-content: center;
+      }
+
+      .tile {
+        padding: 10px;
+        text-align: center;
+        border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+        font-size: 24px;
+      }
+      .tile:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .icon {
+        display: inline-flex;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .with-bg {
+        background-color: #ff9800;
+      }
+      .with-icon {
+        background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father-512.png");
+      }
+
+      .with-wrong-icon {
+        background-image: url("https://cdn2.iconfinder.com/data/avatars-60/5985/34-Father-512.png");
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img alt="opis obrazku" /> -->
+    <div class="tile-set">
+      <div class="tile">
+        <p>✅ 💙 There is a background and the picture is loaded</p>
+        <span class="icon with-bg with-icon"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is a background but not picture</p>
+        <span class="icon with-bg"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is a background color but the picture didn't load</p>
+        <span class="icon with-bg with-wrong-icon"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is a background color but the picture didn't load</p>
+        <span class="icon with-wrong-icon"></span>
+      </div>
+    </div>
+  </body>
+</html>

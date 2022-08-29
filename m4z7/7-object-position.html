@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: monospace;
+        color: #212121;
+        letter-spacing: -0.05em;
+        line-height: 1.5;
+      }
+
+      .base {
+        width: 480px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .base > img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .card-set {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -20px;
+        margin-left: -20px;
+      }
+
+      .card {
+        margin: 20px 0 0 20px;
+        flex-basis: calc(100% / 2 - 20px);
+      }
+
+      .card,
+      .base {
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        text-align: center;
+      }
+
+      .card > .label,
+      .base > .label {
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .label > span {
+        display: block;
+        text-align: center;
+      }
+
+      .thumb {
+        position: relative;
+        height: 380px;
+        width: 100%;
+        border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+      }
+
+      .thumb > img {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      .card:nth-child(1) img {
+        object-fit: fill;
+        object-position: 50px 100px;
+      }
+
+      .card:nth-child(2) img {
+        object-fit: contain;
+        object-position: left bottom;
+      }
+
+      .card:nth-child(3) img {
+        object-fit: cover;
+        object-position: 20% 30px;
+      }
+
+      .card:nth-child(4) img {
+        object-fit: scale-down;
+        object-position: right top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-set">
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">
+            <span>object-fit: fill</span>
+            <span>object-position: 50px 50px</span>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">
+            <span>object-fit: contain</span>
+            <span>object-position: left bottom</span>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">
+            <span>object-fit: cover</span>
+            <span>object-position: 20% 30px</span>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=320&w=240"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">
+            <span>object-fit: scale-down</span>
+            <span>object-position: right top</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
