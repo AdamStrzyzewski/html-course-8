@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        padding: 15px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #f9f9fd;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="300"
+      height="300"
+      style="outline: 2px dashed #2a2a2a"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Using g to inherit presentation attributes -->
+      <g fill="white" stroke="green" stroke-width="5">
+        <circle cx="40" cy="40" r="25" />
+        <circle cx="60" cy="60" r="25" />
+      </g>
+    </svg>
+    <svg
+      viewBox="0 -10 511.991 511"
+      xmlns="http://www.w3.org/2000/svg"
+      width="300"
+      height="300"
+      style="outline: 2px dashed #2a2a2a"
+    >
+      <path
+        d="M510.652 185.883a27.177 27.177 0 00-23.402-18.688l-147.797-13.418-58.41-136.75C276.73 6.98 266.918.497 255.996.497s-20.738 6.483-25.023 16.53l-58.41 136.75-147.82 13.418c-10.837 1-20.013 8.34-23.403 18.688a27.25 27.25 0 007.937 28.926L121 312.773 88.059 457.86c-2.41 10.668 1.73 21.7 10.582 28.098a27.087 27.087 0 0015.957 5.184 27.14 27.14 0 0013.953-3.86l127.445-76.203 127.422 76.203a27.197 27.197 0 0029.934-1.324c8.851-6.398 12.992-17.43 10.582-28.098l-32.942-145.086 111.723-97.964a27.246 27.246 0 007.937-28.926zM258.45 409.605"
+        fill="red"
+      />
+      <!-- MoveTo: M, m
+LineTo: L, l, H, h, V, v
+Cubic Bézier Curve: C, c, S, s
+Quadratic Bézier Curve: Q, q, T, t
+Elliptical Arc Curve: A, a
+ClosePath: Z, z -->
+      <!-- M	(x, y)+	
+Move the current point to the coordinate x,y. Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit absolute LineTo (L) command(s) (see below).
+
+Formula: Pn = {x, y}
+
+m	(dx, dy)+	
+Move the current point by shifting the last known position of the path by dx along the x-axis and by dy along the y-axis. Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit relative LineTo (l) command(s) (see below).
+
+Formula: Pn = {xo + dx, yo + dy} -->
+    </svg>
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <polygon
+        points="
+        20,20
+        20,200
+        200, 20
+        200,200
+        "
+        fill="orange"
+        stroke="black"
+      />
+    </svg>
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <polygon
+        points="
+      20,20
+      20,200
+      115,250
+      200,200
+      200, 20
+      "
+        fill="orange"
+        stroke="black"
+      />
+    </svg>
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <rect
+        width="200"
+        height="200"
+        fill="tomato"
+        stroke="black"
+        x="50"
+        y="20"
+        rx="40"
+      />
+      <rect
+        width="250"
+        height="150"
+        fill="orange"
+        stroke="#2a2a2a"
+        stroke-width="20"
+        x="120"
+        y="120"
+        rx="50"
+        ry="30"
+      />
+    </svg>
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <circle
+        r="100"
+        fill="tomato"
+        stroke="black"
+        stroke-width="4"
+        cx="200"
+        cy="150"
+      />
+    </svg>
+
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <ellipse rx="150" ry="100" cx="200" cy="150" fill="#2a2aff" />
+    </svg>
+
+    <svg width="400" height="300" style="outline: 2px dashed black">
+      <line x1="20" y1="50" x2="380" y2="50" stroke="black" stroke-width="2" />
+      <line x1="20" y1="50" x2="20" y2="100" stroke="black" stroke-width="2" />
+      <line x1="20" y1="50" x2="180" y2="300" stroke="black" stroke-width="2" />
+      <line x1="20" y1="50" x2="200" y2="100" stroke="black" stroke-width="2" />
+    </svg>
+  </body>
+</html>

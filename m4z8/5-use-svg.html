@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9fd;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .icon {
+        margin-left: 12px;
+        margin-right: 12px;
+        border: 2px dashed #2a2a2a;
+        border-radius: 8px;
+        fill: #2a2a2a;
+      }
+
+      .icon:hover {
+        fill: #03a9f4;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0"
+      xmlns="http://www.w3.org/2000/svg"
+      overflow="hidden"
+    >
+      <defs>
+        <!-- Trash can icon -->
+        <symbol id="delete" viewBox="0 0 32 32">
+          <path
+            d="M8 25.333C8 26.8 9.2 28 10.667 28h10.667c1.467 0 2.667-1.2 2.667-2.667v-16h-16v16zm17.333-20h-4.667L19.333 4h-6.667l-1.333 1.333H6.666V8h18.667V5.333z"
+          />
+        </symbol>
+        <!-- Camera icon -->
+        <symbol id="camera" viewBox="0 0 32 32">
+          <path
+            d="M20.267 16a4.267 4.267 0 11-8.534 0 4.267 4.267 0 018.534 0z"
+          />
+          <path
+            d="M12 2.667L9.56 5.334H5.333a2.675 2.675 0 00-2.667 2.667v16c0 1.467 1.2 2.667 2.667 2.667h21.333c1.467 0 2.667-1.2 2.667-2.667v-16c0-1.467-1.2-2.667-2.667-2.667h-4.227l-2.44-2.667h-8zm4 20c-3.68 0-6.667-2.987-6.667-6.667S12.32 9.333 16 9.333 22.667 12.32 22.667 16 19.68 22.667 16 22.667z"
+          />
+        </symbol>
+        <!-- Portfolio icon -->
+        <symbol id="work" viewBox="0 0 32 32">
+          <path
+            d="M26.667 8h-5.333V5.333a2.658 2.658 0 00-2.667-2.667h-5.333a2.658 2.658 0 00-2.667 2.667V8H5.334a2.646 2.646 0 00-2.653 2.667l-.013 14.667a2.658 2.658 0 002.667 2.667h21.333a2.658 2.658 0 002.667-2.667V10.667A2.658 2.658 0 0026.668 8zm-8 0h-5.333V5.333h5.333V8z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="container">
+      <svg class="icon" width="200" height="200">
+        <use href="#delete"></use>
+      </svg>
+      <svg class="icon" width="200" height="200">
+        <use href="#work"></use>
+      </svg>
+      <svg class="icon" width="200" height="200">
+        <use href="#camera"></use>
+      </svg>
+    </div>
+  </body>
+</html>
