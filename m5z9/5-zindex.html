@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background-color: #f9f9fd;
+        color: #2a2a2a;
+      }
+
+      .container {
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .box {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 64px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .box:nth-child(1) {
+        top: 20px;
+        left: 130px;
+        background-color: #1789fc;
+        z-index: 2;
+      }
+      .box:nth-child(2) {
+        top: 50px;
+        left: 40px;
+        background-color: #ffd07b;
+        z-index: 1;
+      }
+      .box:nth-child(3) {
+        top: 80px;
+        left: 250px;
+        background-color: purple;
+        z-index: 3;
+      }
+      .box:nth-child(4) {
+        top: 120px;
+        left: 120px;
+        background-color: #4caf50;
+        z-index: 4;
+      }
+      .box:nth-child(5) {
+        top: 150px;
+        left: 20px;
+        background-color: yellow;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box hover">3</div>
+      <div class="box">4</div>
+      <div class="box">-1</div>
+    </div>
+  </body>
+</html>

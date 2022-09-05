@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        position: static;
+        /* 
+        static - default
+        relative
+        absolute
+        fixed
+        sticky
+        inherit
+        */
+      }
+
+      .relative {
+        position: relative;
+        /* bottom: 50px;
+        right: 50px; */
+      }
+
+      /* .absolute {
+        position: absolute;
+      } */
+
+      .tl {
+        top: 100px;
+        left: 100px;
+      }
+
+      .box:nth-child(1) {
+        background-color: teal;
+      }
+
+      .box:nth-child(2) {
+        background-color: orange;
+      }
+
+      .box:nth-child(3) {
+        background-color: palevioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box relative"></div>
+      <div class="box relative absolute tl"></div>
+      <div class="box relative"></div>
+    </div>
+  </body>
+</html>

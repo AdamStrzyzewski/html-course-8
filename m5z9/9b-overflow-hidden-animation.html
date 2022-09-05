@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .box {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 25% auto;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        background-color: #bdbdbd;
+        overflow: hidden;
+      }
+
+      .overlay {
+        background-color: #3f51b5;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(120%, -120%) rotate(360deg) scale(0.5);
+        transition: 0.5s;
+      }
+
+      .box:hover .overlay {
+        transform: translate(0, 0) rotate(0) scale(1);
+      }
+
+      .overlay > p {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="overlay">
+        <p>This is the hiddent text box</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- animation example TODO -->

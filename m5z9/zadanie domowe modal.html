@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .modal {
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 300px;
+        background-color: teal;
+        position: fixed;
+        z-index: 1;
+        /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+        transition: all 2s;
+        transform: translateX(-50%) translateY(-50%) scale(1) rotate(720deg);
+        opacity: 1;
+        visibility: visible;
+        display: block;
+      }
+
+      .is-hidden {
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <button data-modal-open>open</button>
+
+    <div class="modal is-hidden" data-modal>
+      <button data-modal-close>close</button>
+    </div>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          modal: document.querySelector("[data-modal]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+        }
+      })();
+    </script>
+  </body>
+</html>
