@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .modal {
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 300px;
+        background-color: teal;
+        position: fixed;
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+        display: block;
+      }
+
+      .is-hidden {
+        pointer-events: none;
+        visibility: none;
+        opacity: 0;
+      }
+
+      .animate {
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-direction: forwards;
+        animation-fill-mode: both;
+      }
+
+      .spin-back {
+        animation-name: spin-back;
+        animation-duration: 1s;
+        animation-direction: forwards;
+        animation-fill-mode: both;
+      }
+
+      @keyframes spin {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateX(-50%) translateY(-50%) scale(1) rotate(720deg);
+        }
+      }
+
+      @keyframes spin-back {
+        0% {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(-50%) scale(1) rotate(720deg);
+        }
+
+        100% {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button data-modal-open>open</button>
+
+    <div class="modal is-hidden spin-back" data-modal>
+      <button data-modal-close>close</button>
+    </div>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          modal: document.querySelector("[data-modal]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+          refs.modal.classList.toggle("animate");
+          refs.modal.classList.toggle("spin-back");
+        }
+      })();
+    </script>
+  </body>
+</html>
