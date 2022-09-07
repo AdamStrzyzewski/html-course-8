@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+
+      .flex-container {
+        border: 2px dashed black;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 100px);
+        /* overflow: hidden; */
+      }
+      .circle {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 32px;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: tomato;
+        transform: rotate(0);
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        transition-property: transform;
+      }
+
+      .flex-container:hover .circle {
+        transform: scale(1.5);
+      }
+
+      .circle:nth-child(1) {
+        background-color: orange;
+        transition-duration: 500ms;
+      }
+      .circle:nth-child(2) {
+        background-color: #03a9f4;
+        transition-duration: 1500ms;
+      }
+      .circle:nth-child(3) {
+        background-color: palevioletred;
+        transition-duration: 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="circle">500ms</div>
+      <div class="circle">1500ms</div>
+      <div class="circle">3000ms</div>
+    </div>
+  </body>
+</html>

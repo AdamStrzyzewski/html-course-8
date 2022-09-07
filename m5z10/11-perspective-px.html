@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #f9f9fd;
+      }
+
+      .scene {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 390px;
+        border: 3px solid black;
+        border-radius: 4px;
+        margin: -10px;
+        background-color: #fff;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .box {
+        flex-basis: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        animation: rotateY 3000ms infinite alternate backwards ease-in-out
+          1000ms;
+      }
+
+      .box:nth-child(1) {
+        background-color: #f44336;
+      }
+
+      .box:nth-child(2) {
+        background-color: #9c27b0;
+      }
+
+      .box:nth-child(3) {
+        background-color: #3f51b5;
+      }
+
+      .box:nth-child(4) {
+        background-color: #03a9f4;
+      }
+
+      .box:nth-child(5) {
+        background-color: #009688;
+      }
+
+      .box:nth-child(6) {
+        background-color: #4caf50;
+      }
+
+      .box:nth-child(7) {
+        background-color: #ffc107;
+      }
+
+      .box:nth-child(8) {
+        background-color: #795548;
+      }
+
+      .box:nth-child(9) {
+        background-color: #e91e63;
+      }
+
+      @keyframes rotateY {
+        0% {
+          transform: perspective(1000px) rotateY(90deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateY(-60deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

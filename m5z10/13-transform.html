@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #f9f9fd;
+      }
+
+      .parent {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        border: 10px solid #303f9f;
+        border-radius: 10px;
+        background-color: #3f51b5;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 10px solid #ffa000;
+        border-radius: 10px;
+        background-color: #ffc107;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        /* https://codepen.io/BartDaw/pen/jOxbjGL?editors=1100 */
+
+        /* transform: translateX(-50%) translateY(-50%) rotate(45deg) scale(3)
+          skewX(30deg) skewY(45deg); */
+        transform-origin: top left;
+        /* transform: rotate(45deg); */
+        /* transform: matrix(1, 2, 3, 4, 5, 6); */
+        /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+
+        /*transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+          transform: perspective(17px);
+          transform: rotate(0.5turn);
+          transform: rotate3d(1, 2.0, 3.0, 10deg);
+          transform: rotateX(10deg);
+          transform: rotateY(10deg);
+          transform: rotateZ(10deg);
+          transform: translate(12px, 50%);
+          transform: translate3d(12px, 50%, 3em);
+          transform: translateX(2em);
+          transform: translateY(3in);
+          transform: translateZ(2px);
+          transform: scale(2, 0.5);
+          transform: scale3d(2.5, 1.2, 0.3);
+          transform: scaleX(2);
+          transform: scaleY(0.5);
+          transform: scaleZ(0.3);
+          transform: skew(30deg, 20deg);
+          transform: skewX(30deg);
+          transform: skewY(1.07rad); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --dot-size: 16px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #2a2a2a;
+      }
+
+      .container {
+        min-height: 100vh;
+        width: 420px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .box {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid tomato;
+        border-radius: 4px;
+        font-size: 17px;
+      }
+
+      .box::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        animation: rotateWithOrigin 3000ms linear 1000ms infinite;
+      }
+
+      .box:nth-child(1)::before {
+        transform-origin: top left;
+        /* can be pixels or percentages */
+      }
+
+      .box:nth-child(2)::before {
+        transform-origin: top center;
+      }
+
+      .box:nth-child(3)::before {
+        transform-origin: top right;
+      }
+
+      .box:nth-child(4)::before {
+        transform-origin: center left;
+      }
+
+      .box:nth-child(5)::before {
+        transform-origin: center center;
+      }
+
+      .box:nth-child(6)::before {
+        transform-origin: center right;
+      }
+
+      .box:nth-child(7)::before {
+        transform-origin: bottom left;
+      }
+
+      .box:nth-child(8)::before {
+        transform-origin: bottom center;
+      }
+
+      .box:nth-child(9)::before {
+        transform-origin: bottom right;
+      }
+
+      .box::after {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: var(--dot-size);
+        height: var(--dot-size);
+        background-color: blue;
+        border-radius: 50%;
+      }
+
+      .box:nth-child(1)::after {
+        top: calc(var(--dot-size) / -2);
+        left: calc(var(--dot-size) / -2);
+      }
+
+      .box:nth-child(2)::after {
+        top: calc(var(--dot-size) / -2);
+        left: center;
+      }
+
+      .box:nth-child(3)::after {
+        top: calc(var(--dot-size) / -2);
+        right: calc(var(--dot-size) / -2);
+      }
+
+      .box:nth-child(4)::after {
+        top: center;
+        left: calc(var(--dot-size) / -2);
+      }
+
+      .box:nth-child(5)::after {
+        top: center;
+        left: center;
+      }
+
+      .box:nth-child(6)::after {
+        top: center;
+        right: calc(var(--dot-size) / -2);
+      }
+
+      .box:nth-child(7)::after {
+        bottom: calc(var(--dot-size) / -2);
+        left: calc(var(--dot-size) / -2);
+      }
+
+      .box:nth-child(8)::after {
+        bottom: calc(var(--dot-size) / -2);
+        left: center;
+      }
+
+      .box:nth-child(9)::after {
+        bottom: calc(var(--dot-size) / -2);
+        right: calc(var(--dot-size) / -2);
+      }
+
+      @keyframes rotateWithOrigin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">top left</div>
+      <div class="box">top center</div>
+      <div class="box">top right</div>
+      <div class="box">center left</div>
+      <div class="box">center center</div>
+      <div class="box">center right</div>
+      <div class="box">bottom left</div>
+      <div class="box">bottom center</div>
+      <div class="box">bottom right</div>
+    </div>
+  </body>
+</html>

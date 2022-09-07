@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #f9f9fd;
+      }
+
+      .scene {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        border-radius: 4px;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        /*   transition: transform 0.5s ease-in-out; */
+      }
+
+      .box.rotate-x {
+        /*   transform: rotateX(60deg); */
+        animation: rotateX 1500ms infinite alternate ease-in-out 1000ms;
+      }
+
+      .box.rotate-y {
+        /*   transform: rotateY(60deg); */
+        animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
+      }
+
+      .box.rotate-x {
+        background-color: tomato;
+      }
+
+      .box.rotate-y {
+        background-color: blue;
+      }
+
+      .scene + .scene {
+        margin-left: 50px;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      @keyframes rotateX {
+        0% {
+          transform: perspective(400px) rotateX(0deg);
+        }
+
+        100% {
+          transform: perspective(400px) rotateX(60deg);
+        }
+      }
+
+      @keyframes rotateY {
+        0% {
+          transform: perspective(400px) rotateY(0deg);
+        }
+
+        100% {
+          transform: perspective(400px) rotateY(60deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scene">
+        <div class="box rotate-x">rotateX(60deg)</div>
+      </div>
+
+      <div class="scene">
+        <div class="box rotate-y">rotateY(60deg)</div>
+      </div>
+    </div>
+  </body>
+</html>

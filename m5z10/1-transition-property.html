@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: tomato;
+        transform: rotate(0);
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        transition-property: background-color, transform;
+        /* transition-property: all; */
+        transition-duration: 2s;
+      }
+
+      .box:hover {
+        background-color: teal;
+        transform: rotate(160deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
