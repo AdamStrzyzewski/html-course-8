@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style>
+      ul {
+        list-style: none;
+      }
+      input {
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      label {
+        cursor: pointer;
+        position: relative;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      input:checked + label {
+        /* background-color: red; */
+      }
+
+      label::before {
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 2px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 1px dotted black;
+        border-radius: 50%;
+        transition: transform 0.5s;
+      }
+
+      input:checked + label::before {
+        background-color: red;
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <ul>
+        <li>
+          <input
+            id="hobby-music"
+            type="checkbox"
+            name="hobby"
+            value="music"
+            checked
+          />
+          <label for="hobby-music"> Music </label>
+        </li>
+        <li>
+          <input
+            id="hobby-sports"
+            type="checkbox"
+            name="hobby"
+            value="sports"
+            checked
+          />
+          <label for="hobby-sports"> Sports </label>
+        </li>
+        <li>
+          <input
+            id="hobby-reading"
+            type="checkbox"
+            name="hobby"
+            value="reading"
+          />
+          <label for="hobby-reading"> Reading </label>
+        </li>
+      </ul>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

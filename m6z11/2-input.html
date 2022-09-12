@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <style>
+      form {
+        border: 1px dotted black;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+
+      input:checked + label {
+        background-color: red;
+      }
+
+      input {
+        accent-color: #e74c3c;
+      }
+
+      ul {
+        list-style: none;
+      }
+      /* https://caniuse.com/css-has */
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="username" placeholder="Username" />
+    </form>
+
+    <form>
+      <input
+        value="123"
+        type="password"
+        name="password"
+        minlength="5"
+        maxlength="12"
+      />
+      <button type="submit">submit</button>
+    </form>
+
+    <form>
+      <p>choose a color</p>
+
+      <input id="red-input-id" type="radio" name="color" value="red" checked />
+      <label for="red-input-id">Red</label>
+
+      <input id="green-input-id" type="radio" name="color" value="green" />
+      <label for="green-input-id">Green</label>
+
+      <input id="blue-input-id" type="radio" name="color" value="blue" />
+      <label for="blue-input-id">Blue</label>
+
+      <input id="blue-2-input-id" type="radio" name="color-2" value="blue" />
+      <label for="blue-2-input-id">Blue</label>
+    </form>
+
+    <form>
+      <ul>
+        <li>
+          <input
+            id="hobby-music"
+            type="checkbox"
+            name="hobby"
+            value="music"
+            checked
+          />
+          <label for="hobby-music"> Music </label>
+        </li>
+        <li>
+          <input
+            id="hobby-sports"
+            type="checkbox"
+            name="hobby"
+            value="sports"
+            checked
+          />
+          <label for="hobby-sports"> Sports </label>
+        </li>
+        <li>
+          <input
+            id="hobby-reading"
+            type="checkbox"
+            name="hobby"
+            value="reading"
+          />
+          <label for="hobby-reading"> Reading </label>
+        </li>
+      </ul>
+      <button type="submit">submit</button>
+      <!-- ?hobby=music&hobby=sports -->
+    </form>
+
+    <form>
+      <input type="number" min="5" max="10" />
+    </form>
+    <!-- /* 5.4E6 => 5.4 * 10^6 */ -->
+    <!-- notacja naukowa / postać wykładnicza -->
+    <!-- https://pl.wikipedia.org/wiki/Notacja_naukowa -->
+    <form>
+      <input type="number" step="0.5" />
+    </form>
+
+    <form>
+      <label>
+        Phone number
+        <input
+          type="range"
+          name="phone_number"
+          min="111111111"
+          max="999999999"
+          value="505398345"
+        />
+        <p>Selected value <span class="js-selected-value">505-398-345</span></p>
+      </label>
+    </form>
+
+    <form>
+      <input type="tel" />
+    </form>
+
+    <form>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+      <input type="date" min="2022-01-01" max="2022-06-30" />
+      <input type="time" />
+      <input type="datetime-local" />
+    </form>
+
+    <form>
+      <input type="file" />
+    </form>
+
+    <form>
+      <input type="color" />
+    </form>
+
+    <script>
+      const rangeInput = document.querySelector('input[type="range"]');
+      const output = document.querySelector(".js-selected-value");
+      rangeInput.addEventListener("input", (e) => {
+        let formattedPhoneNumber = e.target.value.split("");
+        formattedPhoneNumber.splice(3, 0, "-");
+        formattedPhoneNumber.splice(7, 0, "-");
+        formattedPhoneNumber = formattedPhoneNumber.join("");
+        output.textContent = formattedPhoneNumber;
+      });
+    </script>
+  </body>
+</html>
+
+<!-- <input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"> -->

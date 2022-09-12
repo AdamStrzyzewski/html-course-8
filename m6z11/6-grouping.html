@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+      }
+
+      label {
+        display: block;
+      }
+      fieldset {
+        border: 3px solid red;
+        box-shadow: 10px 10px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Enter your contact details</legend>
+        <label>
+          Name
+          <input type="text" name="username" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your favourite programming language</legend>
+        <label>
+          <input type="checkbox" name="language" value="python" />
+          Python
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="js" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="ruby" />
+          Ruby
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>I want to receive</legend>
+        <label>
+          <input type="checkbox" name="newsletter" value="weekly" />
+          The weekly newsletter
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="company_offers" />
+          Offers from the company
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="associated_offers" />
+          Offers from associated companies
+        </label>
+      </fieldset>
+
+      <button type="submit">Subscribe</button>
+      <input type="reset" />
+    </form>
+  </body>
+</html>

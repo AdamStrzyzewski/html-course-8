@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style></style>
+  </head>
+  <body>
+    <!-- <form method="POST"> -->
+    <form method="GET" name="signupForm" autocomplete="off" novalidate>
+      <!-- method="GET" -> ?email=rewtqwe%40test.pl&password=rewqrqw -->
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+
+      <!-- alternatywny sposób -->
+      <label for="email-input">Email</label>
+      <input id="email-input" type="email" name="email" />
+
+      <label for="password-input"> Password </label>
+      <input id="password-input" type="password" name="password" />
+
+      <button type="submit">Log in</button>
+    </form>
+  </body>
+</html>
