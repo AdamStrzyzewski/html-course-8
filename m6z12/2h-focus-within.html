@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      input {
+        width: 100px;
+        padding: 10px;
+      }
+
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #2a2a2a;
+        font-family: sans-serif;
+        line-height: 1.5;
+        padding: 30px;
+      }
+      body:focus-within {
+        /* background-color: aquamarine; */
+      }
+
+      form:focus-within {
+        border-color: #2196f3;
+      }
+
+      label:focus-within {
+        color: violet;
+        border-color: green;
+      }
+
+      input:focus-within {
+        color: red;
+      }
+      input:focus {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label class="form-label">
+        <span class="label-text">Username</span>
+        <input type="text" class="form-input" name="username" />
+      </label>
+
+      <label class="form-label">
+        <span class="label-text">Email</span>
+        <input type="email" class="form-input" name="username" />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

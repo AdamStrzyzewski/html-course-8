@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      label {
+        cursor: pointer;
+        position: relative;
+      }
+      li {
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      label::before {
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 0px;
+        content: "";
+        width: 16px;
+        height: 15px;
+        border: 2px solid #212121;
+        border-radius: 3px;
+        transition: transform 0.5s;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+      }
+
+      input:checked + label {
+        color: blue;
+      }
+
+      input:checked + label::before {
+        border: none;
+        background-image: url("./sprite.svg#checkmark");
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <ul>
+        <li>
+          <input
+            id="hobby-music"
+            type="checkbox"
+            name="hobby"
+            value="music"
+            checked
+          />
+          <label for="hobby-music"> Music </label>
+        </li>
+        <li>
+          <input
+            id="hobby-sports"
+            type="checkbox"
+            name="hobby"
+            value="sports"
+            checked
+          />
+          <label for="hobby-sports"> Sports </label>
+        </li>
+        <li>
+          <input
+            id="hobby-reading"
+            type="checkbox"
+            name="hobby"
+            value="reading"
+          />
+          <label for="hobby-reading"> Reading </label>
+        </li>
+      </ul>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

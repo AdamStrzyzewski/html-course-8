@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #2a2a2a;
+        font-family: sans-serif;
+        line-height: 1.5;
+        padding: 30px;
+      }
+      button {
+        display: inline-flex;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2196f3;
+        color: #fff;
+        font-size: inherit;
+        cursor: pointer;
+      }
+
+      .btn:enabled {
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+          0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+      }
+      .btn:disabled {
+        background-color: lightgray;
+        color: #2a2a2a;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <button class="btn">Active button</button>
+      <button class="btn" disabled>Disabled button</button>
+    </form>
+  </body>
+</html>

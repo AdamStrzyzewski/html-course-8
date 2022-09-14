@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      input {
+        width: 100px;
+        padding: 10px;
+      }
+
+      .form-input::placeholder {
+        color: black;
+      }
+      .form-input {
+        background-color: white;
+        border-style: solid;
+        border-color: black;
+        background-color: white;
+      }
+
+      .form-input:not(:placeholder-shown):not(:focus):valid {
+        background-color: green;
+      }
+      .form-input:not(:placeholder-shown):not(:focus):invalid {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        class="form-input"
+        name="username"
+        required
+        minlength="3"
+        placeholder=" "
+      />
+
+      <input
+        type="email"
+        class="form-input"
+        name="mail"
+        required
+        placeholder="password..."
+      />
+    </form>
+  </body>
+</html>

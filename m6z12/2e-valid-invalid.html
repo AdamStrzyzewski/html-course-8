@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      input {
+        width: 100px;
+        padding: 10px;
+      }
+
+      .form-input {
+        background-color: white;
+      }
+
+      .form-input:valid {
+        background-color: green;
+        color: white;
+      }
+
+      .form-input:invalid {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        class="form-input"
+        name="username"
+        required
+        minlength="3"
+      />
+
+      <input type="email" class="form-input" name="mail" required />
+    </form>
+  </body>
+</html>

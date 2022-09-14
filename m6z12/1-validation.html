@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #2a2a2a;
+      }
+
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+        /* display: flex;
+        flex-direction: column; */
+      }
+      input {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <!-- regular expressions / regex -->
+      <!-- https://regexr.com/ -->
+      <!-- <label
+        >Username
+        <input
+          type="text"
+          name="username"
+          required
+          pattern="^[a-zA-Ząęć]+\s[a-zA-Ząęć]+$"
+          title="Username must be two words separated by a space"
+      /></label> -->
+      <!-- \s whitespace -->
+
+      <label>
+        Password
+        <input
+          type="text"
+          name="password"
+          required
+          minlength="6"
+          maxlength="12"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%\\\]])(?!.*\s).*$"
+          title="Please include at least 1 uppercase char, 1 lowercase char and 1 number and no spaces"
+        />
+        <!-- () -> search group -->
+        <!-- positive lookahead ?= -->
+        <!-- negative lookahead ?! -->
+        <!-- \d digit 0-9 -->
+        <!-- \\ digit 0-9 -->
+        <!-- \] - escaped ] character -->
+        <!-- \\ - escaped \ character -->
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      3
+      <label
+        >How many pizzas do you want?
+        <input type="number" name="amount" required min="1" max="10" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      2
+      <input type="text" name="username" required minlength="3" />
+      <input
+        type="password"
+        name="password"
+        required
+        minlength="6"
+        maxlength="7"
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+    <form>
+      1
+      <input type="text" name="username" required />
+      <input type="password" name="password" required />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

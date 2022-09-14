@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <style>
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      input {
+        width: 100px;
+        padding: 10px;
+      }
+
+      .form-input:in-range {
+        background-color: green;
+      }
+      .form-input:out-of-range {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="number"
+        required
+        min="1"
+        max="10"
+        step="1"
+        value="1"
+        class="form-input"
+      />
+      <input
+        type="number"
+        required
+        min="1"
+        max="10"
+        step="1"
+        value="11"
+        class="form-input"
+      />
+      <input
+        type="number"
+        required
+        min="1"
+        max="10"
+        step="1"
+        class="form-input"
+      />
+    </form>
+  </body>
+</html>
