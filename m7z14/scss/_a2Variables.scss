@@ -1,0 +1,6 @@
+// @use "./aVariables" -> aVariables.$primaryColor
+@use "./aVariables" as colorVariables;
+
+span {
+  color: colorVariables.$primaryColor;
+}

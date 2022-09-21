@@ -1,0 +1,33 @@
+// szablon - template
+%button {
+  display: inline-flex;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.button-success {
+  @extend %button;
+  background-color: green;
+}
+
+.button-danger {
+  @extend %button;
+  background-color: red;
+}
+
+// .button {
+//   display: inline-flex;
+//   border-radius: 3px;
+//   font-size: 16px;
+//   padding: 10px 20px;
+//   color: white;
+//   background-color: gray;
+// }
+
+// .button-success {
+//   @extend .button;
+//   background-color: green;
+// }

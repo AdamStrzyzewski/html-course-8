@@ -1,0 +1,45 @@
+$animals: dog, cat, bird, turtle, elephant, a, b, c;
+
+@mixin backgroundImg($url) {
+  background-image: url("../images/#{$url}.png");
+}
+
+@each $animal in $animals {
+  $i: index($animals, $animal);
+  .grid:nth-child(#{$i}) {
+    @include backgroundImg($animal);
+  }
+}
+
+// .icon {
+//   width: 50px;
+//   height: 50px;
+//   @each $animal in $animals {
+//     &.#{$animal}-icon {
+//       @include backgroundImg($animal);
+//     }
+//   }
+// }
+
+// dla ciekawskich @for @while
+
+// .icon {
+//   width: 50px;
+//   height: 50px;
+//   @each $animal in dog, cat, bird, turtle, elephant {
+//     &.#{$animal}-icon {
+//       background-image: url("../images/#{$animal}.png");
+//     }
+//   }
+// }
+
+// .icon {
+//   width: 50px;
+//   height: 50px;
+//   .dog-icon {
+//     background-image: url("../images/dog.png");
+//   }
+//   .cat-icon {
+//     background-image: url("../images/cat.png");
+//   }
+// }

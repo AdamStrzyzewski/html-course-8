@@ -1,0 +1,12 @@
+// https://autoprefixer.github.io/
+
+.example {
+  display: grid;
+  transition: all 0.5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, red);
+}
+
+div {
+  mask: url(image.png);
+}

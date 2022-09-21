@@ -1,0 +1,42 @@
+$primaryColor: red;
+
+@mixin bordered($color) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+}
+
+.section {
+  @include bordered($primaryColor);
+}
+
+.header {
+  @include bordered(teal);
+}
+
+// two variables
+// @mixin bordered($color, $width) {
+//   border-top: $width solid $color;
+//   border-bottom: $width solid $color;
+// }
+
+// .section {
+//   @include bordered($primaryColor, 2px);
+// }
+
+// .header {
+//   @include bordered(teal, 2px);
+// }
+
+// default variable value
+// @mixin bordered($color, $width: 2px) {
+//   border-top: $width solid $color;
+//   border-bottom: $width solid $color;
+// }
+
+// .section {
+//   @include bordered($primaryColor, 1px);
+// }
+
+// .header {
+//   @include bordered(teal);
+// }

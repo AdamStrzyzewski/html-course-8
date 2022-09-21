@@ -1,0 +1,27 @@
+$boxWidth: 930px;
+$divisor: 10;
+
+.box {
+  // addition
+  width: $boxWidth + 30px;
+  width: 930px + 30px;
+  width: 930px + 30;
+  //   width: 930px + 50%; -> error
+  width: calc(930px + 50%);
+  // subtraction
+  width: 930px - 30px;
+  width: 100% - 20%;
+  // multiplication
+  width: 50px * 2;
+  // division
+  width: (100px / 5);
+  width: 100px / 5px + 10px;
+  width: $boxWidth / $divisor;
+  width: (90px / 0);
+}
+
+$gridItemMargin: 20px;
+.box {
+  margin: calc($gridItemMargin * 2);
+  margin: calc(#{$gridItemMargin} * 2);
+}

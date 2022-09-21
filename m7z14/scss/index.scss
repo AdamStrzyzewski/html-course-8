@@ -1,0 +1,25 @@
+// @import
+// @use
+
+// _partial.scss
+@use "./aVariables";
+// @import "./bNested";
+// @import "./cMath";
+// @import "./dExtend";
+// @import "./eMixin";
+// @import "./fEach";
+
+// @import "./_gColors";
+// @import "./_gColors-use";
+
+// @use "./hPrefixes";
+
+// @use "a2Variables";
+
+// @use "./lib/reset";
+
+// button {
+//   color: reset.$button-public-var;
+//   //   outline: reset.$button-private-var;
+//   @include reset.button-reset;
+// }
