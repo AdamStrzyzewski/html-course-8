@@ -1,5 +1,6 @@
 // @use "./aVariables" -> aVariables.$primaryColor
 @use "./aVariables" as colorVariables;
+// @use "./aVariables" as *; -> no namespace
 
 span {
   color: colorVariables.$primaryColor;

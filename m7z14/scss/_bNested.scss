@@ -4,6 +4,7 @@
     & + label {
       &::before {
         color: blue;
+        // background-image: url();
       }
     }
 
@@ -12,6 +13,7 @@
     }
   }
 }
+
 .button {
   color: red;
   &:hover {

@@ -1,0 +1,18 @@
+$body-size: 14px;
+
+html {
+  font-size: $body-size;
+}
+@function toRem($pxValue) {
+  @return calc($pxValue/$body-size) * 1rem;
+}
+
+@function toRem($pxValue) {
+  @return calc($pxValue/16px) * 1rem;
+}
+
+p {
+  font-size: toRem(16px);
+}
+
+// rem comes from html
