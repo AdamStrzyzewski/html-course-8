@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1170px;
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        /* border: 1px solid black; */
+        padding: 10px;
+      }
+      .element {
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .element:nth-child(1) {
+        background-color: #f44336;
+      }
+      .element:nth-child(2) {
+        background-color: #3f51b5;
+      }
+      .element:nth-child(3) {
+        background-color: #4caf50;
+      }
+      .element:nth-child(4) {
+        background-color: #00bcd4;
+      }
+      .element:nth-child(5) {
+        background-color: #e91e63;
+      }
+      .element:nth-child(6) {
+        background-color: #009688;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+        .element {
+          flex-basis: calc((100% - 10px) / 2);
+          font-size: 32px;
+          margin-bottom: 0px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .element {
+          border: 5px dashed black;
+          background-clip: padding-box;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding: 30px;
+          gap: 30px;
+        }
+        .element {
+          /* calc((100% - numberOfGapsInRow * valueOfOneGap) / numberOfElementInRow) */
+          flex-basis: calc((100% - 60px) / 3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="element">1</div>
+      <div class="element">2</div>
+      <div class="element">3</div>
+      <div class="element">4</div>
+      <div class="element">5</div>
+      <div class="element">6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #2a2a2a;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: sans-serif;
+        transition: background-color 1s;
+      }
+
+      /* 
+      screen | max-width:600px | result
+         1   |      0          |   0
+      not refers to the entire query
+      */
+      @media not screen and (max-width: 600px) {
+        body {
+          background-color: pink;
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          background-color: pink;
+        }
+      }
+
+      /* OR tylko 1 z zasad musi być spełniona */
+
+      /* @media (max-width: 600px) or (min-width: 900px) {
+        body {
+          background-color: orange;
+        }
+      } */
+
+      /* @media (max-width: 600px), (min-width: 900px) {
+        body {
+          background-color: orange;
+        }
+      } */
+
+      /* AND */
+      /* @media screen and (min-width: 550px) and (max-width: 800px) {
+        body {
+          background-color: red;
+        }
+      } */
+
+      /* @media (max-height: 600px) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media (min-height: 600px) {
+        body {
+          background-color: green;
+        }
+      } */
+      /* @media (max-width: 600px) {
+        body {
+          background-color: orange;
+        }
+      } */
+      /* @media screen
+      @media print
+      @media all */
+      /* @media screen and (min-width: 600px) {
+        body {
+          background-color: #4caf50;
+        }
+      }
+
+      @media screen and (min-width: 900px) {
+        body {
+          background-color: #3f51b5;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        body {
+          background-color: #ff5722;
+        }
+      } */
+
+      /* @media print {
+        body {
+          background-color: black;
+          color: green;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>I am responsive</h1>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: orange;
+
+        text-align: center;
+        line-height: 180px;
+        font-size: 32px;
+        white-space: nowrap;
+      }
+
+      .container.responsive {
+        max-width: 1140px;
+        margin-bottom: 40px;
+      }
+
+      .container.adaptive {
+        max-width: 400px;
+      }
+
+      @media (min-width: 600px) {
+        .container {
+          background-color: #00bcd4;
+        }
+
+        .container.adaptive {
+          max-width: 600px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .container {
+          background-color: #8bc34a;
+        }
+
+        .container.adaptive {
+          max-width: 900px;
+        }
+      }
+
+      @media (min-width: 1140px) {
+        .container {
+          background-color: #ff5252;
+        }
+
+        .container.adaptive {
+          max-width: 1140px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container responsive">
+      <p class="label">I am a responsive container</p>
+    </div>
+    <div class="container adaptive">
+      <p class="label">I am an adaptive container</p>
+    </div>
+  </body>
+</html>
