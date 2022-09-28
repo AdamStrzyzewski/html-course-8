@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100%;
+        margin: auto;
+        display: block;
+      }
+
+      @media (min-width: 600px) {
+        img {
+          width: 300px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        img {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img
+      src="https://picsum.photos/id/237/320/240"
+      srcset="
+        https://picsum.photos/id/237/320/240 1x,
+        https://picsum.photos/id/237/1960    2x,
+        https://picsum.photos/id/237/3000    3x
+      "
+      alt="cute puppy"
+    /> -->
+
+    <img
+      alt="cute puppy"
+      src="https://picsum.photos/id/237/300"
+      srcset="
+        https://picsum.photos/id/237/300   300w,
+        https://picsum.photos/id/237/600   600w,
+        https://picsum.photos/id/237/1200 1200w,
+        https://picsum.photos/id/237/2000 2000w,
+        https://picsum.photos/id/237/3000 3000w
+      "
+      sizes="(min-width: 950px) 100vw, (min-width: 900px) 600px, (min-width: 600px) 300px, 100vw"
+    />
+
+    <!-- <img
+      alt="testowy obrazek"
+      src="img.png"
+      srcset="img-1200x714.png 1200w, img-3000x1768.png 3000w"
+      sizes="100vw"
+    /> -->
+
+    <!-- 1680px * 2 = 3360 => img-3000 -->
+    <!-- 375px * 3 = 1125 => img-1200 -->
+
+    <img
+      alt="jakiś opis obrazka hipotetycznego"
+      src="photo-300.jpg"
+      srcset="
+        photo-300.jpg   300w,
+        photo-600.jpg   600w,
+        photo-900.jpg   900w,
+        photo-1200.jpg 1200w
+      "
+      sizes="400px"
+    />
+    <!-- 
+      400 * 2 => 800 => photo-900.jpg
+      400 * 3 => 1200 => photo-1200.jpg
+     -->
+  </body>
+</html>

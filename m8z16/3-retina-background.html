@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .box {
+        width: 320px;
+        height: 240px;
+        background-image: url("https://picsum.photos/id/237/320/240");
+        background-size: 320px 240px;
+      }
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .box {
+          background-image: url("https://picsum.photos/id/237/640/480");
+        }
+      }
+
+      @media (min-device-pixel-ratio: 3),
+        (min-resolution: 268dpi),
+        (min-resolution: 3dppx) {
+        .box {
+          background-image: url("https://picsum.photos/id/237/1024");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

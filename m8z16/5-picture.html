@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        max-width: 100%;
+        margin: auto;
+        display: block;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .thumb {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="thumb">
+        <picture>
+          <source
+            srcset="
+              https://picsum.photos/id/237/550/600  550w,
+              https://picsum.photos/id/237/800/1200 800w
+            "
+            media="(max-width: 600px)"
+            sizes="(min-width: 480px) 480px, 100vw"
+          />
+          <source
+            srcset="
+              https://picsum.photos/id/237/800/400   800w,
+              https://picsum.photos/id/237/1600/800 1600w,
+              https://picsum.photos/id/237/2000     2000w
+            "
+            media="(min-width: 601px)"
+            sizes="(min-width: 800px) 800px, 100vw"
+          />
+          <img src="https://picsum.photos/id/237/300/200" alt="Cute puppy" />
+        </picture>
+      </div>
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus porro
+        possimus repellat reiciendis ab veniam maiores molestiae perferendis
+        corporis dignissimos debitis alias, qui quam eos adipisci similique
+        tenetur ex officiis eius necessitatibus cupiditate deleniti. Beatae
+        reprehenderit eaque amet laboriosam, sed dicta! Necessitatibus alias id
+        tempore numquam dolore, quis doloremque nobis saepe repellendus commodi
+        repudiandae porro ad maiores aut. Eveniet, iste? Consectetur nisi error
+        nulla eligendi praesentium aut dicta modi tenetur, a cum est quasi sit,
+        neque, vitae ipsam distinctio exercitationem vero rem doloremque velit
+        odit atque id. Id neque, illum repellat molestias, nemo accusantium quam
+        iste voluptatem, ab aspernatur rem quo saepe in? Cumque labore soluta ea
+        doloribus quos laboriosam vitae error? Dolor fugit, pariatur tempore eum
+        adipisci voluptatibus, quaerat odio ipsam aliquam repellat odit
+        perspiciatis sed cum obcaecati officiis ex consectetur incidunt? Hic
+        distinctio animi, repudiandae assumenda pariatur, similique nulla
+        exercitationem totam optio sed, dicta et eum neque ipsa.
+      </p>
+    </div>
+  </body>
+</html>
